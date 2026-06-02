@@ -1,49 +1,62 @@
-# Check if Array Is Sorted and Rotated
+# Minimum Element After Replacement With Digit Sum
 
 Platform: LeetCode  
 Difficulty: Easy  
 Language: Choose a type  
-Problem Link: https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/submissions/2020336855/  
+Problem Link: https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/submissions/2020356740/  
 Submitted At: 2026-06-02
 
 ---
 
 ## Description
 
-<p>Given an array <code>nums</code>, return <code>true</code><em> if the array was originally sorted in non-decreasing order, then rotated <strong>some</strong> number of positions (including zero)</em>. Otherwise, return <code>false</code>.</p>
+<p>You are given an integer array <code>nums</code>.</p>
 
-<p>There may be <strong>duplicates</strong> in the original array.</p>
+<p>You replace each element in <code>nums</code> with the <strong>sum</strong> of its digits.</p>
 
-<p><strong>Note:</strong> An array <code>A</code> rotated by <code>x</code> positions results in an array <code>B</code> of the same length such that <code>B[i] == A[(i+x) % A.length]</code> for every valid index <code>i</code>.</p>
+<p>Return the <strong>minimum</strong> element in <code>nums</code> after all replacements.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> nums = [3,4,5,1,2]
-<strong>Output:</strong> true
-<strong>Explanation:</strong> [1,2,3,4,5] is the original sorted array.
-You can rotate the array by x = 2 positions to begin on the element of value 3: [3,4,5,1,2].
-</pre>
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">nums = [10,12,13,14]</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">1</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p><code>nums</code> becomes <code>[1, 3, 4, 5]</code> after all replacements, with minimum element 1.</p>
+</div>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> nums = [2,1,3,4]
-<strong>Output:</strong> false
-<strong>Explanation:</strong> There is no sorted array once rotated that can make nums.
-</pre>
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">nums = [1,2,3,4]</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">1</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p><code>nums</code> becomes <code>[1, 2, 3, 4]</code> after all replacements, with minimum element 1.</p>
+</div>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> nums = [1,2,3]
-<strong>Output:</strong> true
-<strong>Explanation:</strong> [1,2,3] is the original sorted array.
-You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.
-</pre>
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">nums = [999,19,199]</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">10</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p><code>nums</code> becomes <code>[27, 10, 19]</code> after all replacements, with minimum element 10.</p>
+</div>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
 	<li><code>1 &lt;= nums.length &lt;= 100</code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
