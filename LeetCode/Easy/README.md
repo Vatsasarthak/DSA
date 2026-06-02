@@ -1,52 +1,49 @@
-# Counting Bits
+# Check if Array Is Sorted and Rotated
 
 Platform: LeetCode  
 Difficulty: Easy  
 Language: Choose a type  
-Problem Link: https://leetcode.com/problems/counting-bits/submissions/2020331459/  
+Problem Link: https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/submissions/2020336855/  
 Submitted At: 2026-06-02
 
 ---
 
 ## Description
 
-<p>Given an integer <code>n</code>, return <em>an array </em><code>ans</code><em> of length </em><code>n + 1</code><em> such that for each </em><code>i</code><em> </em>(<code>0 &lt;= i &lt;= n</code>)<em>, </em><code>ans[i]</code><em> is the <strong>number of </strong></em><code>1</code><em><strong>'s</strong> in the binary representation of </em><code>i</code>.</p>
+<p>Given an array <code>nums</code>, return <code>true</code><em> if the array was originally sorted in non-decreasing order, then rotated <strong>some</strong> number of positions (including zero)</em>. Otherwise, return <code>false</code>.</p>
+
+<p>There may be <strong>duplicates</strong> in the original array.</p>
+
+<p><strong>Note:</strong> An array <code>A</code> rotated by <code>x</code> positions results in an array <code>B</code> of the same length such that <code>B[i] == A[(i+x) % A.length]</code> for every valid index <code>i</code>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> n = 2
-<strong>Output:</strong> [0,1,1]
-<strong>Explanation:</strong>
-0 --&gt; 0
-1 --&gt; 1
-2 --&gt; 10
+<pre><strong>Input:</strong> nums = [3,4,5,1,2]
+<strong>Output:</strong> true
+<strong>Explanation:</strong> [1,2,3,4,5] is the original sorted array.
+You can rotate the array by x = 2 positions to begin on the element of value 3: [3,4,5,1,2].
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> n = 5
-<strong>Output:</strong> [0,1,1,2,1,2]
-<strong>Explanation:</strong>
-0 --&gt; 0
-1 --&gt; 1
-2 --&gt; 10
-3 --&gt; 11
-4 --&gt; 100
-5 --&gt; 101
+<pre><strong>Input:</strong> nums = [2,1,3,4]
+<strong>Output:</strong> false
+<strong>Explanation:</strong> There is no sorted array once rotated that can make nums.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre><strong>Input:</strong> nums = [1,2,3]
+<strong>Output:</strong> true
+<strong>Explanation:</strong> [1,2,3] is the original sorted array.
+You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.
 </pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li><code>0 &lt;= n &lt;= 10<sup>5</sup></code></li>
-</ul>
-
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong></p>
-
-<ul>
-	<li>It is very easy to come up with a solution with a runtime of <code>O(n log n)</code>. Can you do it in linear time <code>O(n)</code> and possibly in a single pass?</li>
-	<li>Can you do it without using any built-in function (i.e., like <code>__builtin_popcount</code> in C++)?</li>
+	<li><code>1 &lt;= nums.length &lt;= 100</code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
