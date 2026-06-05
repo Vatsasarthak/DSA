@@ -3,8 +3,8 @@
 Platform: LeetCode  
 Difficulty: Easy  
 Language: Choose a type  
-Problem Link: https://leetcode.com/problems/contains-duplicate-ii/submissions/2022395452/?envType=problem-list-v2&envId=array  
-Submitted At: 2026-06-04
+Problem Link: https://leetcode.com/problems/remove-duplicates-from-sorted-list/submissions/2023259642/  
+Submitted At: 2026-06-05
 
 ---
 
