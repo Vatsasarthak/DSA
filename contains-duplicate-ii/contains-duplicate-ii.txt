@@ -1,22 +1,25 @@
-import java.util.HashSet;
-import java.util.Set;
-
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 class Solution {
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
-        Set<Integer> set = new HashSet<>();
-        
-        for (int i = 0; i < nums.length; i++) {
-            // Remove the element that is now outside the window
-            if (i > k) {
-                set.remove(nums[i - k - 1]);
-            }
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode node=head;
+        while(node!=null && node.next!=null){
             
-            // Try to add the current element. If it fails, a duplicate exists.
-            if (!set.add(nums[i])) {
-                return true;
+            if(node.next.val == node.val){
+                node.next=node.next.next;
+            }
+            else{
+                node=node.next;
             }
         }
-        
-        return false;
+        return head;
     }
 }
