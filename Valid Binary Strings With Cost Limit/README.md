@@ -1,0 +1,71 @@
+# Valid Binary Strings With Cost Limit
+
+Platform: LeetCode  
+Difficulty: Medium  
+Language: Choose a type  
+Problem Link: https://leetcode.com/problems/valid-binary-strings-with-cost-limit/submissions/2030640061/  
+Submitted At: 2026-06-12
+
+---
+
+## Description
+
+<p>You are given two integers <code>n</code> and <code>k</code>.</p>
+
+<p>The <strong>cost</strong> of a binary string <code>s</code> is defined as the sum of all indices <code>i</code> (0-based) such that <code>s[i] == '1'</code>.</p>
+
+<p>A binary string is considered <strong>valid</strong> if:</p>
+
+<ul>
+	<li>It does not contain two consecutive <code>'1'</code> characters.</li>
+	<li>Its cost is <strong>less than or equal</strong> to <code>k</code>.</li>
+</ul>
+
+<p>Return a list of all valid binary strings of length <code>n</code> in any order.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">n = 3, k = 1</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">["000","010","100"]</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p>The binary strings of length 3 without consecutive <code>'1'</code> characters are:</p>
+
+<ul>
+	<li><code>"000"</code> : <code>cost = 0</code></li>
+	<li>"<code>100"</code> : <code>cost = 0</code></li>
+	<li><code>"010"</code> : <code>cost = 1</code></li>
+	<li><code>"001"</code> : <code>cost = 2</code></li>
+	<li><code>"101"</code> : <code>cost = 0 + 2 = 2</code></li>
+</ul>
+
+<p>Among these, the strings with cost less than or equal to <code>k = 1</code> are <code>"000"</code>, <code>"010"</code> and <code>"100"</code>.</p>
+
+<p>Thus, the valid strings are <code>["000", "010", "100"]</code>.</p>
+</div>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">n = 1, k = 0</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">["0","1"]</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p>The valid binary strings of length 1 are <code>"0"</code> and <code>"1"</code>.</p>
+
+<p>Thus the answer is <code>["0", "1"]</code>.</p>
+</div>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= n &lt;= 12</code></li>
+	<li><code>0 &lt;= k &lt;= n * (n - 1) / 2</code></li>
+</ul>
