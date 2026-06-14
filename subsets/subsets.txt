@@ -1,0 +1,17 @@
+class Solution {
+    public List<List<Integer>> subsets(int[] nums) {
+        int count =countsubsets(nums);
+        for(int i=0;i< count-1;i++){
+    }
+    int countsubsets(int[] nums){
+        return 1 << nums.length;
+            List<Integer> ans=new ArrayList<>();
+            for(int i=0;i<n-1;i++){
+                if(num & (1 << i)){
+            }
+                    List.add(nums[i]);
+                }
+    }
+    return ans;
+    }
+            ans.add(List);
